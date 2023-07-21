@@ -1,0 +1,176 @@
+
+
+body {
+    background-color: #6f8ab7;
+   
+  /* background-image: url(my.jpg); */
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-size: cover;
+}
+
+.text {
+  text-align: center;
+}
+
+
+
+.contacts {
+ 
+  align-items: center;
+}
+
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.counter > button {
+  border-radius: 80%;
+  margin-right: 1em;
+}
+
+.counter > span {
+  padding: 12px;
+}
+
+.myButton {
+  border: 1px solid;
+  margin-bottom: 0.5em;
+  border-radius: 0em;
+  width: 200px;
+  height: 50px;
+}
+
+.pay {
+  border: 1px solid;
+  margin-bottom: 0.5em;
+  border-radius: 0em;
+  width: 200px;
+  height: 50px;
+}
+
+.i{
+    text-align: center;
+    color:black;
+    font-style:oblique;
+
+
+}
+
+.login{
+
+    text-align: end;
+    font-size: large;
+}
+
+.pizza{
+    flex: 1;
+}
+
+
+
+.user{
+
+    color: white;
+    font-weight: bold;
+    text-align: end;
+}
+
+.headingS{
+
+    color: white;
+}
+
+/* styles.css */
+
+/* Style for the API pizzas */
+.container.text-center.menu {
+  margin-top: 20px;
+}
+
+.container.text-center.menu h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.container.text-center.menu .row {
+  justify-content: center;
+}
+
+.container.text-center.menu .col-sm-4 {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.container.text-center.menu .col-sm-4 span {
+  font-size: 18px;
+}
+
+.container.text-center.menu .col-sm-4 button {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.container.text-center.menu .col-sm-4 button:hover {
+  background-color: #0056b3;
+}
+
+/* styles.css */
+
+/* Style for the payment table */
+.container.text-center table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.container.text-center table th,
+.container.text-center table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.container.text-center table th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.container.text-center table td button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.container.text-center table td button:hover {
+  background-color: #0056b3;
+}
+
+.container.text-center table tr:last-child {
+  font-weight: bold;
+}
+
+.container.text-center table tr:last-child td {
+  background-color: #f5f5f5;
+}
