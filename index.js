@@ -121,35 +121,43 @@ document.addEventListener("alpine:init", () => {
                       })
               }
           },
-            payForCart() {
-              // alert("Pay now : "+ this.paymentAmount)
-              this
-              .pay(this.paymentAmount)
-              .then(result => {
-                  if ( result.data.status == 'failure') {
-                      this.message = result.data.message;
-                      setTimeout(() => this.message= '', 3000);
-                  } 
-                  else if(this.cartPizzas.length===0){
-                      this.message='you cant make purchase with an empty cart';
-                      setTimeout(() => {
-                          this.message='';
-                          }, 3000);
-                  }
-                  else {
-                  this.message = 'Payment Received, Enjoy!';
-  
-                  setTimeout(() => {
-                  this.message = '';
-                  this.cartPizzas = [];
-                  this.cartTotal = 0.00
-                  this.cartId = ''
-                  // this.createCart();
-                  this.paymentAmount = 0.00
-                  }, 3000);
-  
-                  }
-          });},
+ payForCart() {
+        // alert("Pay now : "+ this.paymentAmount)
+        this.pay(this.paymentAmount).then((result) => {
+          if (result.data.status == "failure") {
+            this.message = result.data.message;
+            setTimeout(() => (this.message = ""), 3000);
+          }
+          else if (this.cartPizzas.length==0){
+            this.message = 'Your must add Pizza(s) to your cart first';
+
+            setTimeout(() => {
+              this.message = '';
+
+            }, 3000);
+          } else {
+            const change = this.paymentAmount - this.cartTotal;
+
+            this.message = `Your change is: ${change.toFixed(
+              2
+            )}, Payment Received, Enjoy!`;
+
+            setTimeout(() => {
+              this.message = "";
+              this.cartPizzas = [];
+              this.cartTotal = 0.0;
+              this.cartId = "";
+              // this.createCart();
+              this.visibleS = false;
+              this.visibleM=false,
+              this.visibleL=false,
+              this.visible=false,
+            
+              this.paymentAmount = 0.0;
+            }, 3000);
+          }
+        });
+      },
             
             images(pizza){
               return `images/${pizza.size}.png`;
